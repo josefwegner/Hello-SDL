@@ -5,9 +5,7 @@
 #include <cstdio>
 #include <cstdlib>
 
-#ifndef AMIGAOS4
 #define GL_GLEXT_PROTOTYPES
-#endif
 #include <SDL.h>
 #include <SDL_opengles2.h>
 
