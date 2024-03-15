@@ -1,3 +1,4 @@
 build/
 build-amiga/
-Hello-SDL
+Hello-SDL_gl4es
+Hello-SDL_mgl

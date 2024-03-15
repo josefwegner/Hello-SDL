@@ -5,9 +5,14 @@
 #include <cstdio>
 #include <cstdlib>
 
+#ifdef AMIGAOS4_GL4ES
 #define GL_GLEXT_PROTOTYPES
 #include <SDL.h>
 #include <SDL_opengles2.h>
+#else
+#include <SDL.h>
+#include <SDL_opengl.h>
+#endif
 
 int main(int argc, char *argv[])
 {
@@ -33,9 +38,15 @@ int main(int argc, char *argv[])
   // Setup the exit hook
   atexit(SDL_Quit);
 
+#ifdef AMIGAOS4_GL4ES
   // Request OpenGL 3.0
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+#else
+  // Request OpenGL 3.0
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+#endif
 
   // Want double-buffering
   SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
