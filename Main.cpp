@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
   SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
 #else
-  // Request OpenGL 3.0
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 0);
+  // Request OpenGL 1.3
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 1);
+  SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 #endif
 
   // Want double-buffering
